@@ -70,5 +70,5 @@
     setTimeout(() => {
       preloader.style.display = "none";
     }, 500);
-  }, 1000); // preloader يظل 3 ثواني ثم يختفي
+  }, 1000); //   3 ثواني ثم يختفي
 });
