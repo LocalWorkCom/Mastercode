@@ -681,7 +681,7 @@ padding-inline:250px;
 .support-floating-form {
     position: absolute;
     left: 50%;
-    bottom: -250px; 
+    bottom: -260px; 
     transform: translateX(-50%);
     width: 100%;
 }
