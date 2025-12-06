@@ -692,7 +692,9 @@ padding-inline:250px;
     background: white;
     box-shadow: 0px 4px 4px 0px #00000014;
 }
-
+.text-muted{
+  color: #8e8e8e !important;
+}
 .support-floating-form form::before {
     content: "";
     position: absolute;
