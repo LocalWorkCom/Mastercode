@@ -228,49 +228,60 @@ body, html {
     padding: 80px 0;                
     position: relative;
 }
-.middle1 {
-    border-left: 7px solid orange;
-    border-right: 7px solid orange;
-    height: 177px;
-    left: 39px;
-    position: absolute;
-    top: 54px;
-    width: 185px;
-    z-index: 20;
-    border-radius: 5px;
-}
-.hexagon{
-  transform: rotate(90deg);
-}
-.box1 {
-    width:120px;
-    height:120px;
-   border-left: 7px solid orange;
-    border-top: 7px solid orange;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    -moz-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -webkit-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -o-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -ms-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    
+.feature-box {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
-.box2 {
-    width:120px;
-    height:120px;
-    border-bottom: 7px solid orange;
-    border-right: 7px solid orange;
-    -webkit-border-radius: 20px;
-    margin-top:50px;
-    border-radius: 20px;
-    -moz-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -webkit-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -o-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    -ms-transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
-    transform: scale(1) rotate(45deg) translateX(50px) translateY(-50px) skewX(-10deg) skewY(-10deg);
+.feature-img {
+  width: 100%;
+  display: block;
 }
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.icon-overlay i {
+  font-size: 30px; 
+  background: linear-gradient(45deg, #34a97c, #0f244e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px; 
+}
+.feature-title {
+  font-weight: 600;
+  color: #1D2957;
+  font-size: 18px;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .icon-overlay i {
+    font-size: 40px;
+  }
+  .feature-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .icon-overlay i {
+    font-size: 30px;
+  }
+  .feature-title {
+    font-size: 14px;
+  }
+}
+
 
  /* Partners Section */
     .partners-section {
@@ -300,6 +311,13 @@ body, html {
     .mission-section {
       background: url('../images/mission-bg.png') no-repeat center center;
       background-size: cover;
+      padding: 80px 0;
+      color: #1e2b4d;
+      text-align: center;
+    }
+    .mission-section-about{
+      background: url('../images/aboutus-img2.png') no-repeat center center;
+        background-size: cover;
       padding: 80px 0;
       color: #1e2b4d;
       text-align: center;
@@ -340,20 +358,21 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+      text-align: justify;
 }
-
 .service-card .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 98%;
-  padding: 20px;
- background: linear-gradient(180deg, rgba(106, 198, 160, 0.64) 0%, rgba(29, 41, 87, 0.64) 100%);
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(106, 198, 160, 0.64) 0%, rgba(29, 41, 87, 0.64) 100%);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    color: white;
+    text-align: justify;
 }
 .text{
 font-weight: 700;
@@ -734,6 +753,7 @@ padding-inline:250px;
 .video-box .play-btn i {
     color: white;
     font-size: 32px;
+   
 }
 .video-box .frame {
     position: absolute;
@@ -748,6 +768,176 @@ padding-inline:250px;
     border-radius: 50px;
     top: 15px;
     left: -17px;
+}
+/* ===== base ===== */
+.timeline-section { background: #ffffff; color: #0f244e; margin-bottom: 80px; }
+.timeline-section .text-primary { color: #0f244e !important; }
+
+/* الخط الرئيسي */
+.timeline-line{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 160px;               /* اضبط الارتفاع الكلي الذي يناسبك */
+  height: 4px;
+  background: #53c3a4;      /* الخط الأخضر */
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* الحاوية التي تضم العناصر (لتسهيل التمركز) */
+.timeline-items { min-height: 360px; position: relative; }
+
+.timeline-item {
+    position: absolute;
+    top: calc(190px - 50px);
+    transform: translateX(-50%);
+    width: 220px;
+    z-index: 5;
+    text-align: center;
+}
+
+/* مواضع العناصر عبر العرض - ضبطي النسب لو حبيتي */
+.timeline-item.pos-1 { left: 8%; }
+.timeline-item.pos-2 { left: 35%; }
+.timeline-item.pos-3 { left: 62%; }
+.timeline-item.pos-4 { left: 90%; transform: translateX(-50%); }
+
+/* صندوق السنة (المربع الأبيض فوق الخط ومتداخل) */
+.year-box{
+  display: inline-block;
+  background: #F5F5F5;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #0f244e;
+  box-shadow: 0 6px 18px rgba(11,18,40,0.06);
+  position: relative;
+  z-index: 6;
+  border: 1px solid rgba(15,36,78,0.05);
+}
+
+/* الموصل: العمودي والزاوية */
+.connector{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  z-index: 4;
+}
+
+/* السطر العمودي */
+.connector::before{
+  content: "";
+  display: block;
+  width: 3px;
+  height: 28px;             /* طول الخط القصير العمودي */
+  background: #53c3a4;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.connector.up{
+  top: -77px;               /* يرفع الايقونة إلى فوق */
+}
+.connector.up::before{      /* العمودي يتجه لأعلى */
+  height: 28px;
+  transform-origin: top;
+  margin-top: 6px;
+}
+.connector.up::after{
+  /* نميل الخط لليسار فوق (زاوية صاعدة) */
+  transform: rotate(-30deg);
+  margin-left: 6px;
+}
+
+/* إذا .down الايقونة أسفل والنص تحت */
+.connector.down{
+  top: 36px;  
+}
+.connector.down::before {
+    height: 38px;
+    margin-top: 0;
+}
+.connector.down::after{
+  transform: rotate(30deg);
+  margin-left: 6px;
+}
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(11, 18, 40, 0.06);
+    color: #163b85;
+    position: relative;
+    top: -1px;
+    left: -20px;
+    z-index: 6;
+    border: 1px solid rgba(15, 36, 78, 0.05);
+}
+.icon-circle i {
+    background: linear-gradient(135deg, #55c7ab 0%, #0f244e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px; /* اختياري */
+}
+.info-box {
+    max-width: 320px;
+    background: #F5F5F5;
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #0f244e;
+    box-shadow: 0 6px 18px rgba(11, 18, 40, 0.03);
+    margin-top: 18px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+}
+.info-box.top {
+    position: absolute;
+    bottom: calc(100% + 65px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.info-box.bottom {
+    position: absolute;
+    top: calc(100% + 66px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .timeline-line { top: 220px; }
+  .timeline-items { min-height: 320px; }
+  .timeline-item { width: 46%; }
+  .timeline-item.pos-1 { left: 8%; }
+  .timeline-item.pos-2 { left: 52%; }
+  .timeline-item.pos-3 { left: 8%; top: calc(220px - 28px + 160px); }
+  .timeline-item.pos-4 { left: 52%; top: calc(220px - 28px + 160px); }
+}
+
+@media (max-width: 576px) {
+  /* stacked layout for mobile: hide horizontal line and show vertical flow */
+  .timeline-line { display: none; }
+  .timeline-items { min-height: auto; }
+  .timeline-item {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .year-box { margin-bottom: 10px; }
+  .connector { display: none; }
+  .info-box { position: static; margin: 0 auto; text-align: center; }
 }
 
 
