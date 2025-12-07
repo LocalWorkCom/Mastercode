@@ -228,6 +228,15 @@ body, html {
     padding: 80px 0;                
     position: relative;
 }
+/* .why-choose-us {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/why-choose-us.png) no-repeat;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    display: flex;
+} */
 .feature-box {
   position: relative;
   margin-bottom: 20px;
@@ -912,6 +921,173 @@ padding-inline:250px;
     text-align: left;
 }
 
+        .section-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        
+        .image-grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        /* العمود الأول (الصورة الكبيرة) */
+        .col-large {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .large-image-container {
+            height: 560px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* العمود الثاني (صورتين) */
+        .col-medium {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .medium-image-container {
+            height: 275px; /* (420 / 2) - 6 */
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* العمود الثالث (ثلاث صور) */
+        .col-small {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .small-image-container {
+            height: 180px; /* (420 / 3) - 8 */
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* الصور */
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: covegr;
+            transition: transform 0.4s ease;
+        }
+        
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.5));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+        }
+        .image-title {
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+        }
+         /* team section  */
+.team-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.team-item {
+  position: relative;
+  transition: 0.4s ease;
+}
+.team-item img {
+    width: 245px;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 80% / 60%;
+    transition: 0.4s 
+ease;
+}
+.team-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+    border-radius: 80% / 60%;
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+  transition: 0.4s ease;
+}
+
+/* active بدون overlay و مليانة */
+.team-item.active img {
+  transform: scale(1.15);
+}
+
+.team-item.active::after {
+  opacity: 0;
+}
+.team-item.side-cropped {
+    clip-path: inset(0% 0% 0 0%);
+}
+
+/* الأزرار */
+.team-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.team-arrow-btn {
+  width: 45px;
+  height: 45px;
+  background: #4ECB71;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.active-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1D2957;
+  min-width: 200px;
+  text-align: center;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 992px) {
