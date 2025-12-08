@@ -203,10 +203,10 @@ body, html {
 /* why choose ud SECTION */
 .why-choose-us {
     width: 100%;
-    min-height: 500px;              
-    background: url('../images/why-choose-us.png') no-repeat center;
-    background-size: cover;         
-    padding: 80px 0;                
+    min-height: 500px;
+    background: url(../images/why-choose-us.png) no-repeat center;
+    background-size: cover;
+    padding: 185px 0;
     position: relative;
 }
 /* .why-choose-us {
@@ -252,12 +252,11 @@ body, html {
   
 }
  /* Partners Section */
-    .partners-section {
-      padding: 80px 0 50px;
-      text-align: center;
-      background: url('../images/partners-img.png') no-repeat center center;
-      background-size: contain;
-    }
+   .partners-section {
+    padding: 80px 0 50px;
+    text-align: center;
+    background: url(../images/partners-img.png) no-repeat top center;
+}
     .partners-section h2 {
       font-weight: 600;
       margin-bottom: 10px;
@@ -457,11 +456,11 @@ padding-inline:250px;
 .hero-inner::before {
     content: "";
     position: absolute;
-        top: 70px;
+    top: 110px;
     right: 0;
     width: 230px;
     height: 100%;
-    background: url('../../assets/images/beforeimg-hero-white.png') no-repeat center;
+    background: url(../../assets/images/beforeimg-hero-white.png) no-repeat center;
     background-size: contain;
     pointer-events: none;
     z-index: 1;
@@ -1006,11 +1005,21 @@ footer ul li a{
 .hero::before {
     top: 280px;
 }
-.about-img-wrapper img {
-    width: 530px;
-}
 .about {
     padding: 118px 0;
+}
+.about-img-wrapper img {
+    width: 595px;
+    max-width: none;
+}
+.why-choose-us {
+    padding-bottom: 80px;
+}
+.info .h5, h5 {
+    font-size: 1rem;
+}
+.border-end  {
+    padding-inline: 15px;
 }
 }
 /* ===== Responsive ===== */
@@ -1479,11 +1488,15 @@ textarea.form-control {
           top: 326px;
         right: 0;
         width: 185px;
-    }
-}
-    .about-img-wrapper img {
+    }  
+      .about-img-wrapper img {
         display: none;
     }
+    .hero-content .p-3 {
+    padding: 0.5rem !important;
+}
+
+
         .about {
         margin-top: -163px;
     }
@@ -1531,8 +1544,8 @@ textarea.form-control {
     .hero-content .p-3{
     padding: 0.5rem !important;
 }
-    
 }
+
 @media(max-width:376px){
     .video-box .play-btn {
         width: 50px;

@@ -25,11 +25,11 @@ $aboutUsData = AboutUsPage::first();
     <div class="container">
         <div class="row d-flex flex-wrap  justify-content-center align-items-center">
             <div class="col-md-6">
-                <h4 class="text-blue fw-bold mb-md-3 mb-0"><img src="./assets/images/mastercode-icon.png" alt="">
-                    About us
+            
+                <h4 class="text-blue fw-bold mb-md-4 "><img src="./assets/images/mastercode-icon.png" alt="">
+                    About us </h4>
 
-                </h4>
-                <h4 class="text-blue fw-bold mb-md-3 mb-0">
+                <h4 class="text-blue fw-bold mb-md-3 ">
                     {{ $aboutUsData && !empty($aboutUsData->main_hero)
                         ? $aboutUsData->main_hero
                         : 'We deal With The Aspects Of Professional IT Services'
@@ -133,7 +133,7 @@ $aboutUsData = AboutUsPage::first();
 </div>
 <!-- timeline for desktop view  -->
 <section class="timeline-section d-none d-md-block">
-    <div class="box-title text-center mb-md-5 mb-1 py-md-5 py-1">
+    <div class="box-title text-center mb-md-5 mb-1 py-md-3 py-1">
         <img src="././assets/images/mastercode-icon.png" alt="" class="d-block mx-auto mb-2">
         <h3 class="fw-bold text-blue">Our Story & Journey Timeline</h3>
     </div>
@@ -355,7 +355,7 @@ $aboutUsData = AboutUsPage::first();
         </div>
         <div class="row d-flex flex-wrap  justify-content-center">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
+                <div class="d-flex flex-wrap  justify-content-center border-start ">
                     <div class="icon">
                         <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[3]) ? $aboutUsData?->image_mission[3] : asset('assets/images/collaboration.png') }}" alt="">
                     </div>
@@ -378,7 +378,7 @@ $aboutUsData = AboutUsPage::first();
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-end ">
+                <div class="d-flex flex-wrap  justify-content-center  ">
                     <div class="icon">
                         <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[0]) ? $aboutUsData?->image_mission[0] : asset('assets/images/excellence.png') }}" alt="">
                     </div>
