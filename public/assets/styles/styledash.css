@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+}
+
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #0c1c48;
+    color: #fff;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    margin-top: 40px;
+    list-style: none;
+}
+
+.menu-title {
+    font-size: 14px;
+    opacity: .7;
+    margin-bottom: 12px;
+}
+
+.menu li.active {
+    background: #0bb489;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 35px;
+}
+
+/* Top search */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.top-nav input {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Page header */
+.breadcrumb {
+    font-size: 14px;
+    color: #7d7d7d;
+}
+
+.page-header h2 {
+    margin: 5px 0;
+}
+
+.subtitle {
+    color: #7d7d7d;
+    margin-bottom: 25px;
+}
+
+/* Select */
+.selector select {
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Section header */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+}
+
+.section-header span {
+    color: gray;
+}
+
+.btn {
+    margin-left: auto;
+    background: #0bb489;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Section box */
+.section-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e6e6e6;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section-title .tag {
+    background: #d6f5df;
+    color: #0bb489;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.edit {
+    margin-left: auto;
+    cursor: pointer;
+    opacity: .6;
+}
+
+/* Inputs */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 18px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Upload box */
+.upload-box {
+    width: 100%;
+    height: 130px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* 2 columns */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
