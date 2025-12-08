@@ -20,9 +20,9 @@
     <div class="container">
         <div class="row d-flex flex-wrap  justify-content-center align-items-center">
             <div class="col-md-6">
-                <h4 class="text-blue fw-bold mb-md-3 mb-0"><img src="./assets/images/mastercode-icon.png" alt="">
+                <h4 class="text-blue fw-bold mb-md-4 "><img src="./assets/images/mastercode-icon.png" alt="">
                     About us </h4>
-                <h4 class="text-blue fw-bold mb-md-3 mb-0"> We deal With The Aspects Of Professional IT Services
+                <h4 class="text-blue fw-bold mb-md-4 "> We deal With The Aspects Of Professional IT Services
                 </h4>
                 <h4 class="text-muted fw-bold lh-base">Master Code was founded with a vision to empower businesses
                     through smart,
@@ -85,7 +85,7 @@
 </div>
 <!-- timeline for desktop view  -->
 <section class="timeline-section d-none d-md-block">
-    <div class="box-title text-center mb-md-5 mb-1 py-md-5 py-1">
+    <div class="box-title text-center mb-md-5 mb-1 py-md-3 py-1">
         <img src="././assets/images/mastercode-icon.png" alt="" class="d-block mx-auto mb-2">
         <h3 class="fw-bold text-blue">Our Story & Journey Timeline</h3>
     </div>
@@ -222,7 +222,7 @@
         </div>
         <div class="row d-flex flex-wrap  justify-content-center">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
+                <div class="d-flex flex-wrap  justify-content-center border-start ">
                     <div class="icon">
                         <img src="./assets/images/collaboration.png" alt="">
                     </div>
@@ -235,7 +235,7 @@
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-end ">
+                <div class="d-flex flex-wrap  justify-content-center  ">
                     <div class="icon">
                         <img src="./assets/images/excellence.png" alt="">
                     </div>

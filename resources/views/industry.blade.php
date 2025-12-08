@@ -40,19 +40,19 @@
                         </div>
                     </div>
                     <div class="col-md-4 p-md-5  p-0">
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 ">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2 ">
                             <i class="fa-solid fa-store text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">SMEs</h4>
                             <h5 class="text-muted fw-bold "> "We support SMEs with flexible, cost-effective solutions that
                                 help them grow and operate more efficiently."</h5>
                         </div>
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2">
                             <i class="fa-solid fa-utensils text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">Restaurant</h4>
                             <h5 class="text-muted fw-bold "> "We help restaurants streamline operations, improve service,
                                 and enhance overall efficiency."</h5>
                         </div>
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2">
                             <i class="fa-solid fa-person-booth text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">Kiosks</h4>
                             <h5 class="text-muted fw-bold "> "We support SMEs with flexible, cost-effective solutions that
@@ -60,19 +60,19 @@
                         </div>
                     </div>
                     <div class="col-md-4 p-md-5  p-0">
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 ">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2 ">
                             <i class="fa-solid fa-people-line text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">Startups</h4>
                             <h5 class="text-muted fw-bold ">"We empower startups with agile, scalable tools that accelerate
                                 growth and support fast, efficient operations."</h5>
                         </div>
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2">
                             <i class="fa-solid fa-mug-saucer text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">Cafe</h4>
                             <h5 class="text-muted fw-bold "> "We support cafes with tools that simplify operations, boost
                                 efficiency, and enhance customer experience."</h5>
                         </div>
-                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0">
+                        <div class="card-info w-100 pt-md-5 pt-0 mb-md-3 mb-0 p-2">
                             <i class="fa-brands fa-dropbox text-blue mb-md-3 mb-0"></i>
                             <h4 class="text-green fw-bold mb-md-3 mb-0">Selling points</h4>
                             <h5 class="text-muted fw-bold "> "We highlight key selling points that attract customers, boost
