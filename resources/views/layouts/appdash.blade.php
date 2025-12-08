@@ -52,6 +52,9 @@
                     <option value="{{ route('dashboard-book-session') }}" @selected(Route::currentRouteName()=='dashboard-book-session' )>
                         Book A Session page
                     </option>
+                    <option value="{{ route('dashboard-about-us') }}" @selected(Route::currentRouteName()=='dashboard-about-us' )>
+                        About us page
+                    </option>
                 </select>
             </div>
 

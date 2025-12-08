@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsPageController;
 use App\Http\Controllers\BookSessionController;
 use App\Http\Controllers\BookSessionPageController;
 use App\Http\Controllers\ContactUsController;
@@ -45,6 +46,9 @@ Route::prefix('dashboard')->group(function (){
 
     Route::get('/services', [ServicesPageController::class, 'index'])->name('dashboard-services');
     Route::post('/data-services', [ServicesPageController::class, 'store'])->name('update-services');
+
+    Route::get('/aboutUS', [AboutUsPageController::class, 'index'])->name('dashboard-about-us');
+    Route::post('/data-aboutUS', [AboutUsPageController::class, 'store'])->name('update-about-us');
 
     Route::view('/content', 'dashboard.pageContent')->name('pageContent');
 });
