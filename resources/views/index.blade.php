@@ -37,9 +37,10 @@
   </section>
 
   <!-- about  -->
-  <section class="about container mb-5">
-    <div class="row">
-      <div class="col-md-6 right-side p-5 ">
+ <section class="about  mb-5">
+   <div class="container">
+     <div class="row">
+      <div class="col-md-6 right-side p-md-3  ">
         <img src="././assets/images/small-logo-colored.png" alt="logo" width="170">
         <h2 class=" py-4">"Master Code is a software solutions company
           delivering tailored apps, ERP systems, cloud
@@ -59,6 +60,7 @@
 
 
     </div>
+   </div>
   </section>
   <!-- why choose us  -->
  <section class="why-choose-us">
@@ -66,7 +68,7 @@
       <h4 class="text-center"><img src="././assets/images/mastercode-icon.png" alt="" > Why Choose Us </h4>
     <div class="row text-center">
 
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="feature-box">
           <img src="./assets/images/shape.png" class="feature-img" alt="">
 
@@ -78,7 +80,7 @@
          
         </div>
       </div>
-       <div class="col-md-3 my-0 my-md-5"> 
+       <div class="col-6 col-md-3 my-0 my-md-5"> 
         <div class="feature-box my-0 my-md-5">
           <img src="./assets/images/shape.png" class="feature-img" alt="">
 
@@ -90,7 +92,7 @@
          
         </div>
       </div>
-       <div class="col-md-3">
+       <div class="col-6 col-md-3">
         <div class="feature-box">
           <img src="./assets/images/shape.png" class="feature-img" alt="">
 
@@ -112,7 +114,7 @@
          
         </div>
       </div>
-       <div class="col-md-3 my-0 my-md-5">
+       <div class="col-6 col-md-3 my-0 my-md-5">
         <div class="feature-box my-0 my-md-5">
           <img src="./assets/images/shape.png" class="feature-img" alt="">
 
@@ -319,7 +321,7 @@
               <div class="mail-icon">
                 <i class="fa-solid fa-envelope text-white"></i>
               </div>
-              <div class="mail-content text-light mx-5">
+              <div class="mail-content text-light mx-md-3 mx-2">
                 <h5>Customersupport@mcodekw.com</h5>
                 <h5>Info@mcodekw.com</h5>
               </div>
@@ -328,7 +330,7 @@
               <div class="phone-icon">
                 <i class="fa-solid fa-phone text-light"></i>
               </div>
-              <div class="phone-content text-light mx-5">
+              <div class="phone-content text-light mx-md-3 mx-2">
                 <h5>+2010158799</h5>
                 <h5>+201116987744</h5>
               </div>
@@ -336,13 +338,13 @@
             <div class="col-md-4 links justify-content-center">
               <h5 class="text-light me-2">Follow Us</h5>
               <div class="links-icons d-flex   flex-wrap">
-                <div class="facebook-icon ms-4">
+                <div class="facebook-icon ms-md-3 ms-1">
                   <i class="fa-brands fa-facebook text-light"></i>
                 </div>
-                <div class="insta-icon ms-4">
+                <div class="insta-icon ms-md-3 ms-1">
                   <i class="fa-brands fa-instagram text-light"></i>
                 </div>
-                <div class="linkedin-icon ms-4">
+                <div class="linkedin-icon ms-md-3 ms-1">
                   <i class="fa-brands fa-linkedin text-light"></i>
                 </div>
               </div>

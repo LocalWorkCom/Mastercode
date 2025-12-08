@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid nav-grid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand d-none d-lg-block" href="#">
             <img src="{{ asset('assets/images/logo.png') }}" alt="MasterCode Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,6 +30,6 @@
             </ul>
 
         </div>
-        <a class="btn btn-session d-none d-lg-block" href="{{route('book-session')}}">Book A Session</a>
+        <a class="btn btn-session " href="{{route('book-session')}}">Book A Session</a>
     </div>
 </nav>

@@ -456,7 +456,7 @@ padding-inline:250px;
 .hero-inner::before {
     content: "";
     position: absolute;
-    top: 100px;
+    top: 110px;
     right: 0;
     width: 230px;
     height: 100%;
