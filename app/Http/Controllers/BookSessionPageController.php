@@ -12,7 +12,8 @@ class BookSessionPageController extends Controller
     public function index()
     {
         $bookSessionData = BookSessionPage::first();
-        return view('support-form', compact('countries', 'bookSessionData'));
+        $bookSessions = bookSession::get();
+        return view('dashboard.bookSession', compact('bookSessionData', 'bookSessions'));
     }
 
     public function store(Request $request)
@@ -33,7 +34,7 @@ class BookSessionPageController extends Controller
             return back()->withErrors($validation)->withInput();
         }
         $data = $validation->validated();
-        bookSession::updateOrCreate(
+        BookSessionPage::updateOrCreate(
             ['id' => 1],
             $data
         );

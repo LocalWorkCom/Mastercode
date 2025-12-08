@@ -11,7 +11,7 @@ class PolicyPageController extends Controller
     public function index()
     {
         $policyData = PolicyPage::first();
-        return $policyData;
+        return view('dashboard.policy', compact('policyData'));
     }
 
     public function store(Request $request)
@@ -22,7 +22,6 @@ class PolicyPageController extends Controller
             'sub_title_content'         => 'nullable|string|max:5000',
             'image_content'     => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'text'              => 'nullable|array',
-            'text.*'            => 'string',
         ]);
         if ($validation->fails()) {
             return back()->withErrors($validation)->withInput();
@@ -30,7 +29,7 @@ class PolicyPageController extends Controller
         $data = $validation->validated();
         if ($request->hasFile('image_content')) {
             $imagePath = $request->file('image_content')->store('uploads/policy_images', 'public');
-            $data['image_content'] = $imagePath;
+            $data['image_content'] = asset('storage/' . $imagePath);
         }
         PolicyPage::updateOrCreate(
             ['id' => 1],

@@ -11,7 +11,7 @@ class ContactUsPageController extends Controller
     public function index()
     {
         $contactUsData = ContactUsPage::first();
-        return $contactUsData;
+        return view('dashboard.contact-us', compact('contactUsData'));
     }
 
     public function store(Request $request)
@@ -37,7 +37,7 @@ class ContactUsPageController extends Controller
         $data = $validation->validated();
         if ($request->hasFile('image_content')) {
             $imagePath = $request->file('image_content')->store('uploads/contact_us', 'public');
-            $data['image_content'] = $imagePath;
+            $data['image_content'] = asset('storage/' . $imagePath);
         }
         ContactUsPage::updateOrCreate(
             ['id' => 1],

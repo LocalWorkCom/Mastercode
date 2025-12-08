@@ -207,3 +207,10 @@ textarea {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
+
+.text-danger{
+    color: red;
+    font-size: small;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}

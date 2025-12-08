@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Page Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/styles/styledash.css">
 </head>
 
@@ -35,10 +36,25 @@
 
             <!-- Select -->
             <div class="selector">
-                <select>
-                    <option>Contact us page</option>
+                <select id="pageRedirectSelect">
+                    <option value="{{ route('pageContent') }}" @selected(Route::currentRouteName()=='pageContent' )>
+                        Page
+                    </option>
+                    <option value="{{ route('dashboard-contact-us') }}" @selected(Route::currentRouteName()=='dashboard-contact-us' )>
+                        Contact us page
+                    </option>
+                    <option value="{{ route('dashboard-policy') }}" @selected(Route::currentRouteName()=='dashboard-policy' )>
+                        Policy page
+                    </option>
+                    <option value="{{ route('dashboard-services') }}" @selected(Route::currentRouteName()=='dashboard-services' )>
+                        Services page
+                    </option>
+                    <option value="{{ route('dashboard-book-session') }}" @selected(Route::currentRouteName()=='dashboard-book-session' )>
+                        Book A Session page
+                    </option>
                 </select>
             </div>
+
 
             @yield('content')
 
@@ -46,6 +62,15 @@
 
 
     </div>
+    <script>
+        document.getElementById('pageRedirectSelect').addEventListener('change', function() {
+            var url = this.value;
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

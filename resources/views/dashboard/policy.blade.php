@@ -1,12 +1,12 @@
 @extends('layouts.appdash')
 
-@section('title', 'Contact Us')
+@section('title', 'Policy')
 
 @section('content')
 
 <div class="section-header">
-    <h3>Contact us Page - Sections</h3>
-    <span>2 sections configured</span>
+    <h3>Policy & Terms Page - Sections</h3>
+    <span>3 sections configured</span>
     <button class="btn">+ Add new</button>
 </div>
 
@@ -14,7 +14,7 @@
 <div class="alert alert-success">{{ session('success') }}</div>
 @endif
 
-<form action="{{ route('update-contact-us') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('update-policy') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <!-- SECTION 1 -->
@@ -26,7 +26,7 @@
         </div>
 
         <label>paragraph</label>
-        <textarea rows="4" name="p_hero">{{ old('p_hero', $contactUsData->p_hero ?? '') }}</textarea>
+        <textarea rows="4" name="p_hero">{{ old('p_hero', $policyData->p_hero ?? '') }}</textarea>
         @error('p_hero')
         <div class="text-danger">{{ $message }}</div>
         @enderror
@@ -35,7 +35,7 @@
     <!-- SECTION 2 -->
     <div class="section-box">
         <div class="section-title">
-            <strong>Contact Content</strong>
+            <strong>Policy Content</strong>
             <span class="tag">Section 2</span>
             <div class="edit">✎</div>
         </div>
@@ -44,16 +44,16 @@
 
             <div>
                 <label>Main Title</label>
-                <input type="text" name="title_content" value="{{ old('title_content', $contactUsData->title_content ?? '') }}">
+                <input type="text" name="title_content" value="{{ old('title_content', $policyData->title_content ?? '') }}">
                 @error('title_content')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
 
             <div>
-                <label>paragraph</label>
-                <textarea rows="4" name="p_content">{{ old('p_content', $contactUsData->p_content ?? '') }}</textarea>
-                @error('p_content')
+                <label>Sub Title</label>
+                <input type="text" name="sub_title_content" value="{{ old('sub_title_content', $policyData->sub_title_content ?? '') }}">
+                @error('sub_title_content')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
@@ -66,8 +66,8 @@
                 <div class="upload-box" onclick="document.getElementById('uploadImage').click()">
                     <input type="file" id="uploadImage" accept="image/*" style="display:none" onchange="showFileName(event)" name="image_content">
                     <span id="uploadText">
-                        @if(isset($contactUsData->image_content))
-                        {{ basename($contactUsData->image_content) }}
+                        @if(isset($policyData->image_content))
+                        {{ basename($policyData->image_content) }}
                         @else
                         Drop files here or click to upload
                         @endif
@@ -79,35 +79,27 @@
                 @enderror
             </div>
 
-            <div>
-                <label>Form Title</label>
-                <input type="text" name="form_title_content" value="{{ old('form_title_content', $contactUsData->form_title_content ?? '') }}">
-                @error('form_title_content')
-                <div class="text-danger">{{ $message }}</div>
-                @enderror
-            </div>
+        </div>
+
+    </div>
+
+    <div class="section-box">
+        <div class="section-title">
+            <strong>Terms and Policies Content</strong>
+            <span class="tag">Section 3</span>
+            <div class="edit">✎</div>
         </div>
 
         <div class="grid-2">
-            <div>
-                <label>Social media links</label>
-                <input type="text" placeholder="instagram" name="instagram_link" value="{{ old('instagram_link', $contactUsData->instagram_link ?? '') }}">
-                <input type="text" placeholder="facebook" name="facebook_link" value="{{ old('facebook_link', $contactUsData->facebook_link ?? '') }}">
-                <input type="text" placeholder="linkedin" name="linkedin_link" value="{{ old('linkedin_link', $contactUsData->linkedin_link ?? '') }}">
-            </div>
-
-            <div>
-                <label>form fields</label>
-                <input type="text" placeholder="first name" name="first_name" value="{{ old('first_name', $contactUsData->first_name ?? '') }}">
-                <input type="text" placeholder="second name" name="second_name" value="{{ old('second_name', $contactUsData->second_name ?? '') }}">
-                <input type="text" placeholder="email" name="email" value="{{ old('email', $contactUsData->email ?? '') }}">
-                @error('email')
+            @for($i = 0; $i < 4; $i++)
+                <div>
+                <label>Text {{ $i+1 }}</label>
+                <textarea rows="2" name="text[{{ $i }}]">{{ old("text.$i", $policyData->text[$i] ?? '') }}</textarea>
+                @error("text.$i")
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <input type="text" placeholder="phone number" name="phone_number" value="{{ old('phone_number', $contactUsData->phone_number ?? '') }}">
-            </div>
         </div>
-
+        @endfor
     </div>
 
     <div class="text-center mt-3">
