@@ -55,6 +55,12 @@
                     <option value="{{ route('dashboard-about-us') }}" @selected(Route::currentRouteName()=='dashboard-about-us' )>
                         About us page
                     </option>
+                    <option value="{{ route('dashboard-home') }}" @selected(Route::currentRouteName()=='dashboard-home' )>
+                        Home page
+                    </option>
+                    <option value="{{ route('dashboard-industry') }}" @selected(Route::currentRouteName()=='dashboard-industry' )>
+                        Industry page
+                    </option>
                 </select>
             </div>
 
@@ -74,6 +80,7 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 </body>
 
 </html>

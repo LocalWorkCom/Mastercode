@@ -5,6 +5,8 @@ use App\Http\Controllers\BookSessionController;
 use App\Http\Controllers\BookSessionPageController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ContactUsPageController;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\IndustryPageController;
 use App\Http\Controllers\PolicyPageController;
 use App\Http\Controllers\ServicesPageController;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +52,13 @@ Route::prefix('dashboard')->group(function (){
     Route::get('/aboutUS', [AboutUsPageController::class, 'index'])->name('dashboard-about-us');
     Route::post('/data-aboutUS', [AboutUsPageController::class, 'store'])->name('update-about-us');
 
+    Route::get('/home', [HomePageController::class, 'index'])->name('dashboard-home');
+    Route::post('/data-home', [HomePageController::class, 'store'])->name('update-home');
+
+    Route::get('/industry', [IndustryPageController::class, 'index'])->name('dashboard-industry');
+    Route::post('/data-industry', [IndustryPageController::class, 'store'])->name('update-industry');
+
     Route::view('/content', 'dashboard.pageContent')->name('pageContent');
+    Route::view('/', 'dashboard.index')->name('dashboard.index');
 });
 
