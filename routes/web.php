@@ -37,6 +37,8 @@ Route::view('/services', 'services')->name('services');
 Route::get('/book-session', [BookSessionController::class, 'index'])->name('book-session');
 Route::post('/book-session/store', [BookSessionController::class, 'store'])->name('book-session.store');
 
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::prefix('dashboard')->middleware(['check.user'])->group(function (){
