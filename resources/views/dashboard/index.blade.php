@@ -7,6 +7,7 @@
     <title>Pages Management</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/styles/styledash.css')}}">
+<link rel="icon" type="image/png" href="{{asset('assets/images/info-logo.png')}}">
 </head>
 
 <body>

@@ -1,6 +1,4 @@
-*{
- font-family: Tajawal;
-}
+
 
 body, html {
     margin: 0;
@@ -8,6 +6,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+     font-family: Tajawal !important;
 }
 /*------------------------------------------------------- landing page ---------------------------------------------------------- */
 /* Preloader overlay */
@@ -125,8 +124,8 @@ body, html {
   max-width: 100%;
   height: auto;
 }
-.hero-content{
-  margin-top: 140px;
+.hero-content {
+    margin-top: 160px;
 }
 .consultant-btn {
             background: linear-gradient(135deg, #6AC6A0 0%, #6AC6A0 100%);
@@ -145,6 +144,7 @@ body, html {
             gap: 10px;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
         }
         .btn:hover {
             box-shadow: 0 10px 25px rgba(29, 41, 87, 0.35);
@@ -474,7 +474,7 @@ padding-inline:250px;
     position: relative;
     z-index: 0;
 }
-.terms-page-img::before {
+/* .terms-page-img::before {
     content: "";
     position: absolute;
     top: 0;
@@ -485,7 +485,7 @@ padding-inline:250px;
     background-size: cover;
     opacity: 0.07;
     z-index: -1; 
-}
+} */
 .terms ul li {
   list-style-type: disc;
 }
@@ -1026,11 +1026,11 @@ footer ul li a{
 .border-end  {
     padding-inline: 15px;
 }
-.hero-inner::before {
-    top: 130px;
-    right: 0;
-    width: 195px;
-}
+    .hero-inner::before {
+        top: 145px;
+        right: 0;
+        width: 195px;
+    }
  .services{
     margin-top: -200px;
     padding-top: 85px;
@@ -1040,6 +1040,118 @@ footer ul li a{
 }
 .card-info i {
     font-size: 2.5rem;
+}
+.nav-links ul {
+    gap: 5vw;
+}
+.about-img-wrapper {
+    right: calc(-50vw + 50%);
+    top: 53%;
+    transform: translateY(-50%);
+}
+}
+@media (max-width: 1200px){
+.hero-inner::before {
+        top: 175px;
+        right: 0;
+        width: 175px;
+    }
+    .about, .terms, .services, .about-section {
+    margin-top: -110px;
+}
+.info-box.bottom {
+    left: 72%;
+    transform: translateX(-50%);
+}
+    .about-img-wrapper img {
+        width: 535px;
+    }
+    .service-card {
+    width: 335px;
+    height: 400px;
+}
+.text {
+    padding-inline: 135px;
+}
+.info-section .section-header h4 {
+    padding-inline: 130px;
+}
+.testimonial-box {
+    max-width: 670px;
+}
+.review-text {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+    .h4, h4 {
+        font-size: 1.2rem;
+    }
+        .h2, h2 {
+        font-size: 1.9rem;
+    }
+        .h3, h3 {
+        font-size: 1.6rem;
+    }
+    .industry-section {
+    margin-top: -70px;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+.contact-us-section {
+    margin-top: -55px;
+    padding-top: 40px;
+    margin-bottom: -270px;
+}
+    .nav-links ul {
+        gap: 3vw;
+    }
+}
+@media (max-width: 1300px){
+.nav-link {
+    margin-right: 0;
+}
+.nav-links ul {
+    gap: 4vw;
+}
+}
+@media (max-width: 1100px){
+    .nav-links ul {
+        gap: 2vw;
+    }
+        .about-img-wrapper img {
+        width: 480px;
+    }
+        .hero-inner::before {
+        top: 187px;
+        right: 0;
+        width: 175px;
+    }
+    .service-card {
+        width: 290px;
+        height: 330px;
+    }
+        .testimonial-box {
+        max-width: 620px;
+    }
+    .large-image-container {
+    height: 440px;
+}
+.medium-image-container {
+    height: 212px;
+}
+.small-image-container {
+    height: 136px;
+}
+    .h3, h3 {
+        font-size: 1.2rem;
+    }
+    .team-item img {
+    width: 190px;
+    height: 240px;
+}
+.team-wrapper {
+    gap: 6rem;
+    padding: 24px 0;
 }
 }
 
