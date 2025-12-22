@@ -38,12 +38,12 @@ $homeData = HomePage::first();
                     }}
 
         </h2>
-        <button class="consultant-btn">
+        <a class="consultant-btn" href="{{route('book-session')}}">
           {{ $homeData && !empty($homeData->button_name)
                         ? $homeData->button_name
                         : 'Book a consultant session'
                     }}<i class="fa-solid fa-right-long"></i>
-        </button>
+        </a>
       </div>
 
     </div>
