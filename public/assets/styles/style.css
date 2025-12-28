@@ -1105,6 +1105,21 @@ footer ul li a{
     .nav-links ul {
         gap: 3vw;
     }
+    .team-item img {
+    width: 190px;
+    height: 250px;
+}
+.team-wrapper {
+    gap: 5rem;
+    padding: 40px 0;
+}
+    .about, .terms, .services, .about-section {
+        margin-top: -70px;
+        padding-top: 0px;
+    }
+    .hero-content {
+    margin-top: 120px;
+}
 }
 @media (max-width: 1300px){
 .nav-link {
@@ -1113,10 +1128,7 @@ footer ul li a{
 .nav-links ul {
     gap: 3vw;
 }
-.about, .terms, .services, .about-section {
-    margin-top: -120px;
-    padding-top: 0px;
-}    .about-img-wrapper img {
+   .about-img-wrapper img {
         width: 535px;
     }
         .about-img-wrapper {
@@ -1172,9 +1184,9 @@ footer ul li a{
 }
 
 @media (max-width: 1024px) {
-    .hero-inner {
+    /* .hero-inner {
     min-height: 85vh;
-}
+} */
         .hero::before {
         top: 295px;
     }
