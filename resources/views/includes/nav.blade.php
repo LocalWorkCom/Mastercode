@@ -18,15 +18,15 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('services') ? 'active' : '' }}"
                         href="{{ route('services') }}">Services</a>
+                </li>  <li class="nav-item">
+                    <a class="nav-link {{ Request::is('contact-us') ? 'active' : '' }}"
+                        href="{{ route('contact-us') }}">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('industries') ? 'active' : '' }}"
                         href="{{ route('industry') }}">Industries</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('contact-us') ? 'active' : '' }}"
-                        href="{{ route('contact-us') }}">Contact Us</a>
-                </li>
+              
             </ul>
 
         </div>
