@@ -1049,6 +1049,12 @@ footer ul li a{
     top: 53%;
     transform: translateY(-50%);
 }
+.hero-content {
+    margin-top: 60px;
+}
+.hero-inner h2{
+  margin-top: 30px;
+}
 }
 @media (max-width: 1200px){
 .hero-inner::before {
@@ -1117,9 +1123,9 @@ footer ul li a{
         margin-top: -70px;
         padding-top: 0px;
     }
-    .hero-content {
+    /* .hero-content {
     margin-top: 120px;
-}
+} */
 }
 @media (max-width: 1300px){
 .nav-link {
