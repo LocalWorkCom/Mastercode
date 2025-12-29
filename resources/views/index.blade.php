@@ -273,6 +273,20 @@ $homeData = HomePage::first();
 <section class="testimonial-section py-5">
   <div class="container">
 
+    {{-- Hidden database data for JS --}}
+    @if($homeData)
+      @foreach ($homeData->name_reviews as $i => $name)
+        <div class="testimonial-data d-none"
+             data-text="{!! $homeData->p_reviews[$i] ?? '' !!}"
+             data-name="{{ $homeData->name_reviews[$i] ?? '' }}"
+             data-title="{{ $homeData->job_reviews[$i] ?? '' }}"
+             data-img="{{ $homeData->image_reviews[$i] ?? asset('assets/images/person.png') }}"
+            data-stars="{{ $homeData->rating_reviews[$i] ?? 5 }}"
+>
+        </div>
+      @endforeach
+    @endif
+
     <div class="testimonial-box mx-auto text-center p-5">
 
       <!-- Quote icon -->
@@ -281,23 +295,10 @@ $homeData = HomePage::first();
       </div>
 
       <!-- Review text -->
-      <p class="review-text fw-semibold" id="reviewText">
-        {{ $homeData && !empty($homeData->p_reviews[0])
-                        ? '" ' . $homeData->p_reviews[0] . '."'
-                        : '“Participating in Paper Middle East exceeded our expectations.<br>
-        we’ll definitely be back next year!”'
-                    }}
-
-      </p>
+      <p class="review-text fw-semibold" id="reviewText"></p>
 
       <!-- Stars -->
-      <div class="stars my-3" id="starsContainer">
-        <i class="fa-regular fa-star text-warning"></i>
-        <i class="fa-solid fa-star text-warning"></i>
-        <i class="fa-solid fa-star text-warning"></i>
-        <i class="fa-solid fa-star text-warning"></i>
-        <i class="fa-solid fa-star text-warning"></i>
-      </div>
+      <div class="stars my-3" id="starsContainer"></div>
 
       <!-- Navigation + images -->
       <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
@@ -307,30 +308,21 @@ $homeData = HomePage::first();
           <i class="fa-solid fa-angle-left"></i>
         </button>
 
-        <!-- Person 1 -->
-        <img src="./assets/images/person.png" class="reviewer-img small-img" alt="">
+        <!-- Left image (static for design) -->
+        <img src="{{ asset('assets/images/person.png') }}" class="reviewer-img small-img" alt="">
 
-        <!-- Person active -->
+        <!-- Active reviewer -->
         <div class="active-reviewer text-center">
-          <img src="./assets/images/person.png" class="reviewer-img active-img" id="activeImg" alt="">
-          <h6 class="mt-2 fw-bold" id="activeName">
-            {{ $homeData && !empty($homeData->name_reviews[0])
-                        ? '" ' . $homeData->name_reviews[0] . '."'
-                        : 'AHMED EL–SAYED'
-                    }}
-
-          </h6>
-          <p class="text-muted m-0" id="activeTitle">
-            {{ $homeData && !empty($homeData->job_reviews[0])
-                        ? '" ' . $homeData->job_reviews[0] . '."'
-                        : 'SALES DIRECTOR'
-                    }}
-
-          </p>
+          <img src="{{ asset('assets/images/person.png') }}"
+               class="reviewer-img active-img"
+               id="activeImg"
+               alt="">
+          <h6 class="mt-2 fw-bold" id="activeName"></h6>
+          <p class="text-muted m-0" id="activeTitle"></p>
         </div>
 
-        <!-- Person 3 -->
-        <img src="./assets/images/person.png" class="reviewer-img small-img" alt="">
+        <!-- Right image (static for design) -->
+        <img src="{{ asset('assets/images/person.png') }}" class="reviewer-img small-img" alt="">
 
         <!-- Next Button -->
         <button class="nav-btn" id="nextBtn">
@@ -340,7 +332,6 @@ $homeData = HomePage::first();
       </div>
 
     </div>
-
   </div>
 </section>
 
