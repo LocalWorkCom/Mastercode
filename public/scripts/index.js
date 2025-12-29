@@ -1,28 +1,5 @@
 //start  testomensials carousel code
-  const slides = [
-    {
-      text: "“Participating in Paper Middle East exceeded our expectations.<br>we’ll definitely be back next year!”",
-      name: "AHMED EL–SAYED",
-      title: "SALES DIRECTOR",
-      img: "./assets/images/person.png",
-      stars: 5
-    },
-    {
-      text: "“MasterCode helped us scale our business with top-notch technology solutions.”",
-      name: "SALMA HASSAN",
-      title: "PROJECT MANAGER",
-      img: "./assets/images/person2.png",
-      stars: 4
-    },
-    {
-      text: "“Great team, fast delivery, and excellent quality! Highly recommended.”",
-      name: "MOHAMED KHALED",
-      title: "OPERATION MANAGER",
-      img: "./assets/images/person3.png",
-      stars: 5
-    }
-  ];
-
+  const reviews = Array.from(document.querySelectorAll(".testimonial-data"));
   let index = 0;
 
   const reviewText = document.getElementById("reviewText");
@@ -35,31 +12,33 @@
   const prevBtn = document.getElementById("prevBtn");
 
   function renderSlide() {
-    const s = slides[index];
+    const s = reviews[index];
 
-    reviewText.innerHTML = s.text;
-    activeImg.src = s.img;
-    activeName.textContent = s.name;
-    activeTitle.textContent = s.title;
+    reviewText.innerHTML = s.dataset.text;
+    activeImg.src = s.dataset.img;
+    activeName.textContent = s.dataset.name;
+    activeTitle.textContent = s.dataset.title;
 
     let starsHtml = "";
+    const stars = parseInt(s.dataset.stars);
+
     for (let i = 0; i < 5; i++) {
-      starsHtml += `<i class="fa-${i < s.stars ? "solid" : "regular"} fa-star text-warning"></i>`;
+      starsHtml += `<i class="fa-${i < stars ? "solid" : "regular"} fa-star text-warning"></i>`;
     }
     starsContainer.innerHTML = starsHtml;
   }
 
   nextBtn.addEventListener("click", () => {
-    index = (index + 1) % slides.length;
+    index = (index + 1) % reviews.length;
     renderSlide();
   });
 
   prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
+    index = (index - 1 + reviews.length) % reviews.length;
     renderSlide();
   });
 
-  renderSlide();
+  document.addEventListener("DOMContentLoaded", renderSlide);
 
   //end  testomensials carousel code
 
