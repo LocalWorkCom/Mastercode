@@ -386,17 +386,17 @@ $homeData = HomePage::first();
             <h5 class="text-light me-2">Follow Us</h5>
             <div class="links-icons d-flex   flex-wrap">
               <div class="facebook-icon ms-md-3 ms-1">
-                <a href="{{ !empty($footerData->facebook_link) ? url($footerData->facebook_link) : '#' }}">
+                <a href="{{ !empty($homeData->facebook_link) ? url($homeData->facebook_link) : '#' }}">
                   <i class="fa-brands fa-facebook text-light"></i>
                 </a>
               </div>
               <div class="insta-icon ms-md-3 ms-1">
-                <a href="{{ !empty($footerData->instagram_link) ? url($footerData->instagram_link) : '#' }}">
+                <a href="{{ !empty($homeData->instagram_link) ? url($homeData->instagram_link) : '#' }}">
                 <i class="fa-brands fa-instagram text-light"></i>
                 </a>
               </div>
               <div class="linkedin-icon ms-md-3 ms-1">
-                <a href="{{ !empty($footerData->linkedin_link) ? url($footerData->linkedin_link) : '#' }}">
+                <a href="{{ !empty($homeData->linkedin_link) ? url($homeData->linkedin_link) : '#' }}">
                 <i class="fa-brands fa-linkedin text-light"></i></a>
               </div>
             </div>
