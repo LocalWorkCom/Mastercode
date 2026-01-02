@@ -66,13 +66,14 @@ $homeData = HomePage::first();
                     }}
 
         </h2>
-        <button class="consultant-btn">
+        
+        <a class="consultant-btn" href="{{route('about')}}">
           {{ $homeData && !empty($homeData->button_features)
                         ? '" ' . $homeData->button_features . '."'
                         : 'learn more'
                     }}
           <i class="fa-solid fa-right-long"></i>
-        </button>
+        </a>
       </div>
       <div class="col-md-6">
         <div class="about-img-wrapper">

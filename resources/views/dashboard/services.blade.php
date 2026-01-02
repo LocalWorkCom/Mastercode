@@ -7,7 +7,7 @@
 <div class="section-header">
     <h3>Service Page - Sections</h3>
     <span>2 sections configured</span>
-    <button class="btn">+ Add new</button>
+    {{-- <button class="btn">+ Add new</button> --}}
 </div>
 
 @if(session('success'))

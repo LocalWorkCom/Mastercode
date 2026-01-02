@@ -22,7 +22,7 @@
 
             <h2>Pages Management</h2>
             <p>Manage website pages and their visibility</p>
-            <button class="add-page-btn">+ Add Page</button>
+            {{-- <button class="add-page-btn">+ Add Page</button> --}}
 
             <input type="text" class="search-input" placeholder="search for page">
 

@@ -7,7 +7,7 @@
 <div class="section-header">
     <h3>Book Session Page - Sections</h3>
     <span>3 sections configured</span>
-    <button class="btn">+ Add new</button>
+    {{-- <button class="btn">+ Add new</button> --}}
 </div>
 
 @if(session('success'))
