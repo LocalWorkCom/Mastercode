@@ -98,7 +98,7 @@
                         <td> {{ $bookSession->message }}</td>
                         <td> {{ $bookSession->status }}</td>
                         <td>
-                            <button class="btn btn-sm btn-primary">CallBack</button>
+                            <a class="btn btn-sm btn-primary">CallBack</a>
                         </td>
                         
                     </tr>
