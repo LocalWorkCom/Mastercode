@@ -82,7 +82,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our mission'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[0])
                         ? '“' . $aboutUsData->p_mission[0] . '”'
                         : '“To transform businesses with scalable, secure, and innovative technology.”'
@@ -102,7 +102,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our vision'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[1])
                         ? '“' . $aboutUsData->p_mission[1] . '”'
                         : '“To be a trusted tech partner for businesses worldwide.”'
@@ -121,7 +121,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our values'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[2])
                         ? '“' . $aboutUsData->p_mission[2] . '”'
                         : '“Innovation | Integrity | Excellence | Collaboration”'
@@ -283,9 +283,10 @@ $aboutUsData = AboutUsPage::first();
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[0]) ? $aboutUsData?->image_features[0] : asset('assets/images/innovation.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[0]) ? $aboutUsData?->image_features[0] : asset('assets/images/innovation.png') }}"
+                         width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -306,9 +307,9 @@ $aboutUsData = AboutUsPage::first();
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[1]) ? $aboutUsData?->image_features[1] : asset('assets/images/integrity.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[1]) ? $aboutUsData?->image_features[1] : asset('assets/images/integrity.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -330,9 +331,9 @@ $aboutUsData = AboutUsPage::first();
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[2]) ? $aboutUsData?->image_features[2] : asset('/assets/images/customer.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[2]) ? $aboutUsData?->image_features[2] : asset('/assets/images/customer.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -353,11 +354,11 @@ $aboutUsData = AboutUsPage::first();
                 </div>
             </div>
         </div>
-        <div class="row d-flex flex-wrap  justify-content-center">
+        <div class="row d-flex flex-wrap justify-content-center ">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[3]) ? $aboutUsData?->image_features[3] : asset('assets/images/collaboration.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[3]) ? $aboutUsData?->image_features[3] : asset('assets/images/collaboration.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -378,9 +379,9 @@ $aboutUsData = AboutUsPage::first();
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[4]) ? $aboutUsData?->image_features[4] : asset('assets/images/excellence.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[4]) ? $aboutUsData?->image_features[4] : asset('assets/images/excellence.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">

@@ -134,6 +134,7 @@ body, html {
             border: none;
             padding: 16px 36px;
             font-size: 1.1rem;
+             width: fit-content;
             font-weight: 700;
             border-radius: 16px;
             cursor: pointer;
@@ -201,7 +202,7 @@ body, html {
     width: 600px;
     max-width: none;
 }
-/* why choose ud SECTION */
+/* why choose us SECTION */
 .why-choose-us {
     width: 100%;
     /* min-height: 100%; */
@@ -210,34 +211,32 @@ body, html {
     padding: 105px 0;
     position: relative;
 }
-/* .why-choose-us {
-    width: 100%;
-    min-height: 100vh;
-    background: url(../images/why-choose-us.png) no-repeat;
-    background-size: cover;
-    align-items: center;
-    position: relative;
-    display: flex;
-} */
 .feature-box {
   position: relative;
   margin-bottom: 20px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .feature-img {
   width: 100%;
+  height: auto;
   display: block;
 }
+
 .icon-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 .icon-overlay i {
   font-size: 30px; 
@@ -249,8 +248,10 @@ body, html {
 .feature-title {
   font-weight: 600;
   color: #1D2957;
-  font-size: 18px;
-  
+  font-size: 16px;
+  line-height: 1.3;
+  max-width: 90%;
+  word-wrap: break-word;
 }
  /* Partners Section */
    .partners-section {
@@ -289,13 +290,18 @@ body, html {
       color: #1e2b4d;
       text-align: center;
     }
-   .mission-cards .card {
-    background-color: #fff;
-    border-radius: 12px;
-    height: 195px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+  .mission-cards .card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
+
     .mission-cards .card h5 {
       font-weight: 700;
       color: #1D2957;
@@ -310,7 +316,7 @@ body, html {
   gap: 25px;
 }
 .service-card {
-  width: 411px;
+  width: 400px;
   height: 464px;
   border-radius: 20px;
   overflow: hidden;
@@ -344,6 +350,34 @@ padding-inline: 200px;
 text-align: center;
 color: #6AC6A0;
 }
+.hover-box {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 20px;
+  
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+.service-card:hover .hover-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+#serviceCarousel {
+  overflow: visible;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
 .overlay i {
   font-size: 24px;
   margin-bottom: 10px;
@@ -357,6 +391,9 @@ color: #6AC6A0;
   height: 10px;
   background-color: #44c08a;
   border-radius: 50%;
+}
+.hover-box i{
+    color: #34a97c;
 }
 /* testimonial section */
 .testimonial-section{
@@ -372,6 +409,7 @@ color: #6AC6A0;
   border-radius: 15px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.08);
   max-width: 800px;
+  color: #0f244e;
 }
 .reviewer-img {
   border-radius: 50%;
@@ -471,7 +509,7 @@ padding-inline:250px;
 }
 .terms-page-img {
     width: 100%;
-    min-height: 500px;
+    min-height: 400px;
     position: relative;
     z-index: 0;
 }
@@ -636,7 +674,7 @@ padding-inline:250px;
   color: #1D2957;
 }
 .card-info i{
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 /*---------------------------------------- support form page ------------------------------------------------------ */
 .support-form {
@@ -1678,7 +1716,7 @@ display: none;
         font-size: 2rem;
     }
       .hero-inner h2 {
-        margin-top: 90px;
+        margin-top: 25px;
         font-size: 17px;
         line-height: 23px;
     }
@@ -1698,7 +1736,7 @@ display: none;
     padding: 50px 0;
 }
          .hero {
-        min-height: 80vh;
+        min-height: 85vh;
     }
         .hero::before {
         top: 190px;
@@ -1712,7 +1750,7 @@ display: none;
     padding: 0.5rem !important;
 }
         .about {
-        margin-top: -107px;
+        margin-top: -70px;
     }
         .why-choose-us .container {
         padding-top: 0px;
@@ -1855,16 +1893,16 @@ display: none;
         display: none;
     }
         .hero {
-        min-height: 70vh;
+        min-height: 80vh;
     }
         .about .consultant-btn{
             display: none;
         }
 }
 @media(max-width:325px){
-    .hero-inner {
+    /* .hero-inner {
         min-height: 45vh;
-    }
+    } */
         .navbar-brand img {
         height: 35px;
     }
@@ -1872,7 +1910,7 @@ display: none;
         font-size: 1.2rem;
     }
        .hero-inner::before {
-        top: 105px;
+        top: 115px;
         right: 0;
         width: 60px;
     }
@@ -1888,9 +1926,9 @@ display: none;
     min-height: 460px;
     padding: 80px 0;
 }
-         .hero-inner {
+         /* .hero-inner {
         min-height: 50vh;
-    }
+    } */
         .about, .terms, .services, .about-section {
         margin-top: -30px;
         padding-top: 0px;
@@ -1948,8 +1986,8 @@ display: none;
     }    .feature-title {
         font-size: 14px;
     }
-        .hero {
+        /* .hero {
         min-height: 60vh;
-    }
+    } */
   }
   
