@@ -26,14 +26,17 @@ class ServicesPageController extends Controller
             return back()->withErrors($validation)->withInput();
         }
         $data = $validation->validated();
+        $existingImages = ServicesPage::find(1)->image_content ?? [];
+
         if ($request->hasFile('image_content')) {
             foreach ($request->file('image_content') as $key => $image) {
                 $imagePath = $image->store('uploads/policy_images', 'public');
                 $data['image_content'][$key] = asset('storage/' . $imagePath);
             }
-            // $imagePath = $request->file('image_content')->store('uploads/policy_images', 'public');
-            // $data['image_content'] = asset('storage/' . $imagePath);
         }
+
+        $data['image_content'] = array_replace($existingImages, $data['image_content'] ?? []);
+
         ServicesPage::updateOrCreate(
             ['id' => 1],
             $data
