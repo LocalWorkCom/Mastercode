@@ -54,32 +54,33 @@
         <div class="grid-2">
             @for($i = 0; $i < 3; $i++)
                 <div>
-                    <label>Paragraph {{ $i + 1 }}</label>
-                    <textarea rows="4" name="p_content[{{ $i }}]">{{ old("p_content.$i", $servicesData->p_content[$i] ?? '') }}</textarea>
-                    @error("p_content.$i")
-                    <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-
-                <div>
-                    <label>Image {{ $i + 1 }}</label>
-                    <div class="upload-box" onclick="document.getElementById('uploadImage{{ $i }}').click()">
-                        <input type="file" id="uploadImage{{ $i }}" accept="image/*" style="display:none" onchange="showFileName(event, {{ $i }})" name="image_content[{{ $i }}]">
-                        <span id="uploadText{{ $i }}">
-                            @if(isset($servicesData->image_content[$i]))
-                                {{ basename($servicesData->image_content[$i]) }}
-                            @else
-                                Drop files here or click to upload
-                            @endif
-                        </span>
-                        <span id="fileName{{ $i }}" style="display:none; font-weight:600; margin-top:10px; color:#333;"></span>
-                    </div>
-                    @error("image_content.$i")
-                    <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            @endfor
+                <label>Paragraph {{ $i + 1 }}</label>
+                <textarea rows="4" name="p_content[{{ $i }}]">{{ old("p_content.$i", $servicesData->p_content[$i] ?? '') }}</textarea>
+                @error("p_content.$i")
+                <div class="text-danger">{{ $message }}</div>
+                @enderror
         </div>
+
+        <div>
+            <label>Image {{ $i + 1 }}</label>
+            <div class="upload-box" onclick="document.getElementById('uploadImage{{ $i }}').click()">
+                <input type="file" id="uploadImage{{ $i }}" accept="image/*" style="display:none" onchange="showFileName(event, {{ $i }})" name="image_content[{{ $i }}]">
+                <span id="uploadText{{ $i }}">
+                    @if(isset($servicesData->image_content[$i]))
+                    {{ basename($servicesData->image_content[$i]) }}
+                    <button type="button" class="btn-delete" onclick="deleteImage(event, {{ $i }})">✖</button>
+                    @else
+                    Drop files here or click to upload
+                    @endif
+                </span>
+                <span id="fileName{{ $i }}" style="display:none; font-weight:600; margin-top:10px; color:#333;"></span>
+            </div>
+            @error("image_content.$i")
+            <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        @endfor
+    </div>
     </div>
 
     <div class="text-center mt-3">
@@ -94,10 +95,36 @@
         let uploadText = document.getElementById('uploadText' + index);
 
         if (file) {
-            uploadText.style.display = "none";
-            fileNameSpan.style.display = "block";
-            fileNameSpan.textContent = "Uploaded: " + file.name;
+            uploadText.style.display = "inline-block";
+            uploadText.textContent = "Uploaded: " + file.name;
+
+
+            let deleteBtn = document.createElement('button');
+            deleteBtn.type = 'button';
+            deleteBtn.textContent = '✖';
+            deleteBtn.className = 'btn-delete';
+            deleteBtn.onclick = function(e) {
+                e.stopPropagation();
+                document.getElementById('uploadImage' + index).value = '';
+                uploadText.textContent = "Drop files here or click to upload";
+            };
+
+            uploadText.appendChild(deleteBtn);
+
         }
+    }
+
+    function deleteImage(event, index) {
+        event.stopPropagation();
+        let uploadText = document.getElementById('uploadText' + index);
+        uploadText.textContent = "Drop files here or click to upload";
+
+        let form = uploadText.closest('form');
+        let input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'delete_images[]';
+        input.value = index;
+        form.appendChild(input);
     }
 </script>
 

@@ -28,14 +28,22 @@ class ServicesPageController extends Controller
         $data = $validation->validated();
         $existingImages = ServicesPage::find(1)->image_content ?? [];
 
-        if ($request->hasFile('image_content')) {
-            foreach ($request->file('image_content') as $key => $image) {
-                $imagePath = $image->store('uploads/policy_images', 'public');
-                $data['image_content'][$key] = asset('storage/' . $imagePath);
+        if ($request->filled('delete_images')) {
+            foreach ($request->delete_images as $index) {
+                if (isset($existingImages[$index])) {
+                    unset($existingImages[$index]);
+                }
             }
         }
 
-        $data['image_content'] = array_replace($existingImages, $data['image_content'] ?? []);
+        if ($request->hasFile('image_content')) {
+            foreach ($request->file('image_content') as $key => $image) {
+                $imagePath = $image->store('uploads/policy_images', 'public');
+                $existingImages[$key] = asset('storage/' . $imagePath);
+            }
+        }
+
+        $data['image_content'] = $existingImages;
 
         ServicesPage::updateOrCreate(
             ['id' => 1],

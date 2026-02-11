@@ -240,6 +240,7 @@ textarea {
 
 /* Upload box */
 .upload-box {
+    position: relative;
     width: 100%;
     height: 130px;
     border: 2px dashed #ccc;
@@ -250,6 +251,48 @@ textarea {
     color: gray;
     margin-bottom: 20px;
 }
+
+/* .upload-box {
+    position: relative;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+} */
+
+.upload-box:hover {
+    border-color: #007bff;
+}
+
+.upload-text {
+    display: inline-block;
+    position: relative;
+    padding-right: 25px;
+}
+
+.btn-delete {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 18px;
+    padding: 0;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background: #ff7875;
+}
+
 
 /* 2 columns */
 .grid-2 {
