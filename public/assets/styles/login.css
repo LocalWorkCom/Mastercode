@@ -28,12 +28,12 @@ body {
 }
 
 .logo img {
-    width: 200px;
-    margin-bottom: 25px;
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 25px;
     font-weight: 700;
     color: #0a2c54;
     margin-bottom: 10px;
