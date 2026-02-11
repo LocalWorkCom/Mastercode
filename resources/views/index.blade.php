@@ -25,8 +25,8 @@ $homeData = HomePage::first();
         <div class="row hero-content d-flex align-items-center justify-content-center">
 
             <div class="col-md-6">
-                <img src="{{ $homeData && !empty($homeData->image_hero) ? $homeData?->image_hero : asset('assets/images/slider-img.png') }}"
-                    class="img-fluid" alt="img">
+                <a href="{{route('services')}}"><img src="{{ $homeData && !empty($homeData->image_hero) ? $homeData?->image_hero : asset('assets/images/slider-img.png') }}"
+                    class="img-fluid" alt="img"></a>
             </div>
 
             <div class="col-md-6 right-side p-3 ">
