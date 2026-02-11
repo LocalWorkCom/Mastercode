@@ -72,7 +72,7 @@ $servicesData = ServicesPage::first();
                 <div class="col-md-6 mt-md-5 mt-0">
                     <h4 class="text-blue lh-base">
                         {{ $servicesData && !empty($servicesData->p_content[1])
-                    ? $servicesData->p_content[0]
+                    ? $servicesData->p_content[1]
                     : 'A well-implemented ERP system eliminates data silos, enhances
                         collaboration, improves accuracy, and empowers
                         management with real-time insights for strategic decision-making.
