@@ -59,7 +59,12 @@ $servicesData = ServicesPage::first();
             </div>
 
             <div class="col-md-6 d-flex justify-content-end">
-                <img src="{{ $servicesData?->image_content[0] ?: asset('assets/images/services-img1.png') }}" alt="" class="img-fluid h-100 w-100">
+                <img
+                    src="{{ isset($servicesData?->image_content[0]) 
+            ? $servicesData->image_content[0] 
+            : asset('assets/images/services-img1.png') }}"
+                    alt=""
+                    class="img-fluid h-100 w-100">
             </div>
         </div>
         <div class="terms-page-img">
@@ -67,7 +72,12 @@ $servicesData = ServicesPage::first();
 
             <div class="row align-items-center my-md-5 mb-1">
                 <div class="col-md-6 mt-md-5 mt-0">
-                    <img src="{{ $servicesData?->image_content[1] ?: asset('assets/images/services-img2.png') }}" alt="" class="img-fluid h-100 w-100">
+                    <img
+                        src="{{ isset($servicesData?->image_content[1]) 
+            ? $servicesData->image_content[1] 
+            : asset('assets/images/services-img2.png') }}"
+                        alt=""
+                        class="img-fluid h-100 w-100">
                 </div>
                 <div class="col-md-6 mt-md-5 mt-0">
                     <h4 class="text-blue lh-base">
@@ -106,7 +116,12 @@ $servicesData = ServicesPage::first();
                 @endif
             </div>
             <div class="col-md-4 mt-md-5 mt-0">
-                <img src="{{ $servicesData?->image_content[2] ?: asset('assets/images/services-img3.png') }}" alt="" class="img-fluid h-100 w-100">
+                <img
+                    src="{{ isset($servicesData?->image_content[2]) 
+            ? $servicesData->image_content[2] 
+            : asset('assets/images/services-img3.png') }}"
+                    alt=""
+                    class="img-fluid h-100 w-100">
             </div>
         </div>
     </div>
