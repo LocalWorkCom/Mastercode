@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsPageController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookSessionController;
 use App\Http\Controllers\BookSessionPageController;
 use App\Http\Controllers\ContactUsController;
@@ -36,7 +37,11 @@ Route::view('/services', 'services')->name('services');
 Route::get('/book-session', [BookSessionController::class, 'index'])->name('book-session');
 Route::post('/book-session/store', [BookSessionController::class, 'store'])->name('book-session.store');
 
-Route::prefix('dashboard')->group(function (){
+// Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
+// Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::prefix('dashboard')->middleware(['check.user'])->group(function (){
     Route::get('/contact-us', [ContactUsPageController::class, 'index'])->name('dashboard-contact-us');
     Route::post('/data-contact-us', [ContactUsPageController::class, 'store'])->name('update-contact-us');
 

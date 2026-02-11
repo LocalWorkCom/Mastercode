@@ -7,7 +7,7 @@
 <div class="section-header">
     <h3>Industries Page - Sections</h3>
     <span>3 sections configured</span>
-    <button class="btn">+ Add new</button>
+    {{-- <button class="btn">+ Add new</button> --}}
 </div>
 
 @if(session('success'))
@@ -97,7 +97,7 @@
         </div>
 
         <div class="grid-2">
-            @for ($i = 0; $i < 1; $i++)
+            @for ($i = 0; $i < 6; $i++)
                 <div>
                 <label>Main Title</label>
                 <input type="text" name="main_industries[{{ $i }}]"

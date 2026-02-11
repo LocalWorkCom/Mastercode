@@ -7,7 +7,7 @@
 <div class="section-header">
     <h3>Book Session Page - Sections</h3>
     <span>3 sections configured</span>
-    <button class="btn">+ Add new</button>
+    {{-- <button class="btn">+ Add new</button> --}}
 </div>
 
 @if(session('success'))
@@ -98,7 +98,7 @@
                         <td> {{ $bookSession->message }}</td>
                         <td> {{ $bookSession->status }}</td>
                         <td>
-                            <button class="btn btn-sm btn-primary">CallBack</button>
+                            <a class="btn btn-sm btn-primary">CallBack</a>
                         </td>
                         
                     </tr>

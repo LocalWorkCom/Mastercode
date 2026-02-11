@@ -82,7 +82,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our mission'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[0])
                         ? '“' . $aboutUsData->p_mission[0] . '”'
                         : '“To transform businesses with scalable, secure, and innovative technology.”'
@@ -102,7 +102,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our vision'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[1])
                         ? '“' . $aboutUsData->p_mission[1] . '”'
                         : '“To be a trusted tech partner for businesses worldwide.”'
@@ -121,7 +121,7 @@ $aboutUsData = AboutUsPage::first();
                         : 'our values'
                     }}
                 </h5>
-                <p>
+                <p class="text-muted fw-bold">
                     {{ $aboutUsData && !empty($aboutUsData->p_mission[2])
                         ? '“' . $aboutUsData->p_mission[2] . '”'
                         : '“Innovation | Integrity | Excellence | Collaboration”'
@@ -283,9 +283,10 @@ $aboutUsData = AboutUsPage::first();
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[0]) ? $aboutUsData?->image_mission[0] : asset('assets/images/innovation.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[0]) ? $aboutUsData?->image_features[0] : asset('assets/images/innovation.png') }}"
+                         width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -306,9 +307,9 @@ $aboutUsData = AboutUsPage::first();
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[1]) ? $aboutUsData?->image_mission[1] : asset('assets/images/integrity.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[1]) ? $aboutUsData?->image_features[1] : asset('assets/images/integrity.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -330,9 +331,9 @@ $aboutUsData = AboutUsPage::first();
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[2]) ? $aboutUsData?->image_mission[2] : asset('/assets/images/customer.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[2]) ? $aboutUsData?->image_features[2] : asset('/assets/images/customer.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -353,11 +354,11 @@ $aboutUsData = AboutUsPage::first();
                 </div>
             </div>
         </div>
-        <div class="row d-flex flex-wrap  justify-content-center">
+        <div class="row d-flex flex-wrap justify-content-center ">
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center border-start ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[3]) ? $aboutUsData?->image_mission[3] : asset('assets/images/collaboration.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[3]) ? $aboutUsData?->image_features[3] : asset('assets/images/collaboration.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -378,9 +379,9 @@ $aboutUsData = AboutUsPage::first();
 
             </div>
             <div class="col-md-4">
-                <div class="d-flex flex-wrap  justify-content-center  ">
-                    <div class="icon">
-                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_mission[0]) ? $aboutUsData?->image_mission[0] : asset('assets/images/excellence.png') }}" alt="">
+<div class="d-flex align-items-start border-start">
+                    <div class="icon ms-3">
+                        <img src="{{ $aboutUsData && !empty($aboutUsData->image_features[4]) ? $aboutUsData?->image_features[4] : asset('assets/images/excellence.png') }}" width="70px" alt="">
                     </div>
                     <div class="content">
                         <h2 class="fw-bold">
@@ -470,32 +471,42 @@ $aboutUsData = AboutUsPage::first();
 </section>
 
 
-
 <section class="team-section py-5">
     <div class="box-title text-center mb-md-5">
         <img src="././assets/images/mastercode-icon.png" alt="" class="d-block mx-auto mb-2">
         <h3 class="fw-bold text-blue">Our Team </h3>
     </div>
+
     <!-- Slider -->
     <div class="team-wrapper" id="teamSlider">
 
-        <div class="team-item side-cropped">
+        <div class="team-item side-cropped"
+             data-name="{{ $aboutUsData->name_member[0] ?? '-----' }}"
+             data-job="{{ $aboutUsData->job_member[0] ?? '' }}">
             <img src="{{ $aboutUsData && !empty($aboutUsData->image_member[0]) ? $aboutUsData?->image_member[0] : asset('assets/images/women.jpg') }}" alt="">
         </div>
 
-        <div class="team-item">
+        <div class="team-item"
+             data-name="{{ $aboutUsData->name_member[1] ?? '-----' }}"
+             data-job="{{ $aboutUsData->job_member[1] ?? '' }}">
             <img src="{{ $aboutUsData && !empty($aboutUsData->image_member[1]) ? $aboutUsData?->image_member[1] : asset('assets/images/women1.jpg') }}" alt="">
         </div>
 
-        <div class="team-item active">
+        <div class="team-item active"
+             data-name="{{ $aboutUsData->name_member[2] ?? '-----' }}"
+             data-job="{{ $aboutUsData->job_member[2] ?? '' }}">
             <img src="{{ $aboutUsData && !empty($aboutUsData->image_member[2]) ? $aboutUsData?->image_member[2] : asset('assets/images/man.jpg') }}" alt="">
         </div>
 
-        <div class="team-item">
+        <div class="team-item"
+             data-name="{{ $aboutUsData->name_member[3] ?? '-----' }}"
+             data-job="{{ $aboutUsData->job_member[3] ?? '' }}">
             <img src="{{ $aboutUsData && !empty($aboutUsData->image_member[3]) ? $aboutUsData?->image_member[3] : asset('assets/images/women1.jpg') }}" alt="">
         </div>
 
-        <div class="team-item side-cropped">
+        <div class="team-item side-cropped"
+             data-name="{{ $aboutUsData->name_member[4] ?? '-----' }}"
+             data-job="{{ $aboutUsData->job_member[4] ?? '' }}">
             <img src="{{ $aboutUsData && !empty($aboutUsData->image_member[4]) ? $aboutUsData?->image_member[4] : asset('assets/images/women.jpg') }}" alt="">
         </div>
 
@@ -503,43 +514,62 @@ $aboutUsData = AboutUsPage::first();
 
     <div class="team-arrows">
         <button class="team-arrow-btn" onclick="moveSlide(-1)">❮</button>
+<div class="active-name" id="activeName">
+    <h2 class="fw-bold">
+        {{ $aboutUsData->name_member[2] ?? '-----' }}
+    </h2>
+    <h4 class="text-muted fw-bold">
+        {{ $aboutUsData->job_member[2] ?? '' }}
+    </h4>
+</div>
 
-        <div class="active-name" id="activeName">
-            <h2 class="fw-bold">Eng Amr mohammed</h2>
-            <h4 class="text-muted fw-bold">CEO</h4>
-        </div>
 
         <button class="team-arrow-btn" onclick="moveSlide(1)">❯</button>
     </div>
 </section>
 
 
+
 <!-- footer  -->
 @include('includes.footer')
 <script>
-    // moveSlide من غير ما نمسها
+    function updateSlider() {
+        const items = document.querySelectorAll(".team-item");
+
+        items.forEach(item => item.classList.remove("active"));
+
+        const middleIndex = Math.floor(items.length / 2);
+        items[middleIndex].classList.add("active");
+
+        updateActiveName();
+    }
+
     function moveSlide(step) {
         const slider = document.getElementById("teamSlider");
         const items = document.querySelectorAll(".team-item");
 
         if (step === 1) {
-            // نحرك يمين: ننقل أول صورة لآخر القائمة
             slider.appendChild(items[0]);
         } else {
-            // نحرك شمال: ننقل آخر صورة لأول القائمة
             slider.insertBefore(items[items.length - 1], items[0]);
         }
 
-        // نعيد حساب الفهرس
-        const updatedItems = document.querySelectorAll(".team-item");
-        updatedItems.forEach((item, i) => {
-            if (item.classList.contains("active")) {
-                index = i;
-            }
-        });
-
         updateSlider();
     }
+
+    function updateActiveName() {
+        const activeItem = document.querySelector(".team-item.active");
+
+        const name = activeItem.getAttribute("data-name");
+        const job  = activeItem.getAttribute("data-job");
+
+        document.querySelector("#activeName h2").innerText = name && name.trim() !== '' ? name : '-----';
+        document.querySelector("#activeName h4").innerText = job && job.trim() !== '' ? job : '';
+    }
+
+    document.addEventListener("DOMContentLoaded", updateSlider);
 </script>
+
+
 
 @endsection

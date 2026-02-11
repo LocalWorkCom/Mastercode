@@ -7,6 +7,7 @@
     <title>Pages Management</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/styles/styledash.css')}}">
+<link rel="icon" type="image/png" href="{{asset('assets/images/info-logo.png')}}">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 
             <h2>Pages Management</h2>
             <p>Manage website pages and their visibility</p>
-            <button class="add-page-btn">+ Add Page</button>
+            {{-- <button class="add-page-btn">+ Add Page</button> --}}
 
             <input type="text" class="search-input" placeholder="search for page">
 
